@@ -4,7 +4,7 @@ const mysql = require('mysql');
 let connection = mysql.createConnection({
   host:'localhost',
   user: 'root',
-  password: 'root123',
+  password: '*****************************Your Database Password****************',
   database: 'mysqltoform'
 });
 connection.connect((err) => {
