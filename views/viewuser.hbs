@@ -1,0 +1,42 @@
+{{> head}}
+<a href="/"><button type="submit" class="btn btn-primary">HOME</button></a>
+<h1>ALL USER DETAILS</h1>
+<table class="table table-bordered  table-success table-striped border border-info table-striped-columns text-center">
+  
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID.NO</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">ACTION</th>
+    </tr>
+  </thead>
+  
+  <tbody>   
+    {{#each rows}}
+    <tr>
+      <td scope="row"></td>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.address}}</td>
+      <td>{{this.city}}</td>
+      <td>{{this.slist}}</td>
+      <td>{{this.pincode}}</td>          
+      <td><a href="/{{this.id}}"><button class="btn btn-primary"><i class="bi bi-person-x"></i>Delete</button></a></td>  
+
+    </tr>  
+      {{/each}}
+  </tbody>
+
+</table>
+ <script>
+   const btn = document.querySelectorAll('.btn') 
+    btn.addEventListener('click', e =>{
+        e.preventDefault();
+        alert('Delete')
+    })
+ </script>

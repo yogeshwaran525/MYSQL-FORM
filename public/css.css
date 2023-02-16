@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+    padding: 5px;
+}body{
+    background-color: aquamarine;
+    counter-reset: Serial Section; 
+}
+h1{
+    text-align: center;
+    background-color: rgb(140, 197, 236);
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 3px  3px 2px #242121ee;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+form{
+    padding: 15px;
+}
+tr td:first-child:before
+{
+    counter-increment: Serial;      
+    content: counter(Serial); 
+}
+tbody tr:nth-child(odd){
+    background-color: rgb(32, 219, 210);
+    text-align: center;
+    vertical-align: baseline;
+}
+tbody tr:nth-child(even){
+    background-color: rgb(12, 191, 197);
+    text-align: center;
+    vertical-align: baseline;
+}
